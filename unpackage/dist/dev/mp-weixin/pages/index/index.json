@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "网易云音乐",
+  "usingComponents": {
+    "u-avatar": "/node-modules/uview-ui/components/u-avatar/u-avatar",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button",
+    "u-search": "/node-modules/uview-ui/components/u-search/u-search",
+    "u-overlay": "/node-modules/uview-ui/components/u-overlay/u-overlay",
+    "list": "/components/List/List",
+    "overlay": "/components/Login/Overlay"
+  }
+}

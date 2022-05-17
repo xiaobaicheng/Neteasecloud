@@ -1,0 +1,16 @@
+.Hotsearch ._ul.data-v-34d7f25d {
+  line-height: 100rpx;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.Hotsearch ._ul ._li.data-v-34d7f25d {
+  display: flex;
+  justify-content: space-between;
+}
+.Hotsearch ._ul ._li .Serial.data-v-34d7f25d {
+  display: flex;
+}
+.Hotsearch ._ul ._li .Serial ._i.data-v-34d7f25d {
+  padding-right: 70rpx;
+}
+

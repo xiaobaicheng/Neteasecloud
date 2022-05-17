@@ -1,0 +1,35 @@
+import App from './App'
+import { $http } from '@escook/request-miniprogram'
+// #ifndef VUE3
+import Vue from 'vue'
+import uView from 'uview-ui'
+import store from "./stroe"
+Vue.use(uView)
+Vue.prototype.$store = store
+Vue.config.productionTip = false
+App.mpType = 'app'
+uni.$http = $http
+$http.baseUrl = 'http://localhost:3000'
+$http.beforeRequest = function (options) {
+  uni.showLoading({
+    title: '数据加载中...',
+  })
+}
+$http.afterRequest = function () {
+  uni.hideLoading()
+}
+const app = new Vue({
+    ...App
+})
+app.$mount()
+// #endif
+
+// #ifdef VUE3
+import { createSSRApp } from 'vue'
+export function createApp() {
+  const app = createSSRApp(App)
+  return {
+    app
+  }
+}
+// #endif

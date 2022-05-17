@@ -1,0 +1,15 @@
+.search.data-v-09059306 {
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+.serachname.data-v-09059306 {
+  color: #2b85e4;
+}
+.Aftersearch ._ul.data-v-09059306 {
+  line-height: 100rpx;
+}
+.Aftersearch ._ul ._li.data-v-09059306 {
+  display: flex;
+}
+

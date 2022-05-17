@@ -1,0 +1,20 @@
+.logobox.data-v-1fdde3e2 {
+  margin-top: 30rpx;
+  display: flex;
+  margin-left: 3%;
+}
+.logobox .name.data-v-1fdde3e2 {
+  font-size: 24rpx;
+  margin-left: 1%;
+}
+.logobox .logo.data-v-1fdde3e2 {
+  height: 36rpx;
+  width: 36rpx;
+  border-radius: 50%;
+}
+.logobox .logo ._img.data-v-1fdde3e2 {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+

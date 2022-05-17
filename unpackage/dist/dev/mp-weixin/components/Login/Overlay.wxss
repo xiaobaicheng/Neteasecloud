@@ -1,0 +1,18 @@
+.login.data-v-39960d82 {
+  text-align: center;
+  align-items: center;
+}
+.login .span.data-v-39960d82 {
+  width: 80%;
+  padding-left: 10%;
+  margin-top: 2%;
+}
+.login .button.data-v-39960d82 {
+  width: 80%;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+.login .button.data-v-39960d82 u-button {
+  border-radius: 30rpx;
+}
+

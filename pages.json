@@ -1,0 +1,50 @@
+{
+"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "网易云音乐"
+			}
+		},{
+            "path" : "pages/Serach/Serach",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "搜索",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/Detail/Detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "歌单",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/Songdetails/Songdetails",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+				// "navigationBarBackgroundColor": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	
+	
+	   
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "网易云音乐",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+
+}

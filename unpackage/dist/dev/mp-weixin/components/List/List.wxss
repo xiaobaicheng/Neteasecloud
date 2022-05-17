@@ -1,0 +1,52 @@
+.banner.data-v-7b7aed44 {
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 49rpx;
+}
+.banner .bannerright.data-v-7b7aed44 {
+  margin-left: 37%;
+}
+.banner .bannerright ._ul.data-v-7b7aed44 {
+  font-size: 23rpx;
+  font-family: monospace;
+}
+.banner .bannerright ._ul ._li.data-v-7b7aed44 {
+  margin-top: 30rpx;
+  display: flex;
+}
+.banner .baxkone.data-v-7b7aed44 {
+  background-color: #F375AB;
+}
+.banner .baxktwo.data-v-7b7aed44 {
+  background-color: #3ECABD;
+}
+.banner .baxkthree.data-v-7b7aed44 {
+  background-color: #F97C6F;
+}
+.banner .baxkfive.data-v-7b7aed44 {
+  background-color: #58C1EB;
+}
+.banner .bannerleft.data-v-7b7aed44 {
+  position: absolute;
+  border-radius: 10rpx;
+  width: 30%;
+  height: 200rpx;
+}
+.banner .bannerleft ._p.data-v-7b7aed44 {
+  position: relative;
+  left: 17%;
+  top: 27%;
+  font-size: 25px;
+  color: white;
+  font-weight: 600;
+}
+.banner .bannerleft text.data-v-7b7aed44 {
+  font-family: monospace;
+  position: relative;
+  left: 5%;
+  font-size: 20rpx;
+  color: white;
+  bottom: -40%;
+}
+
