@@ -36,6 +36,24 @@
             }
             
         }
+        ,{
+            "path" : "pages/Loginphone/Loginphone",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/Serachdetil/Serachdetil",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "搜索",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	
 	

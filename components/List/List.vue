@@ -68,7 +68,7 @@
 		methods: {
 			Getdetail(id){
 				uni.navigateTo({
-					url:`../../pages/Detail/Detail?id=${id}`
+					url:`../../pages/Detail/Detail?id=${id}`,
 				})
 			},
 			async getdetail() {

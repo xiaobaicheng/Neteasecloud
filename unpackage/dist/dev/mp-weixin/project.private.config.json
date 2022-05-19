@@ -1,0 +1,39 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "",
+                    "pathName": "pages/Songdetails/Songdetails",
+                    "query": "id=1920784999&name=%E8%9D%B4%E8%9D%B6%E6%B3%89%E8%BE%B9&imgUrl=%2522http%253A%252F%252Fp4.music.126.net%252F7BaLyY4q3FmFGDqtN6bA-g%253D%253D%252F109951167086402329.jpg%2522",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/Detail/Detail",
+                    "query": "id=19723756",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/Serach/Serach",
+                    "query": "",
+                    "scene": null,
+                    "launchMode": "default"
+                }
+            ]
+        }
+    }
+}

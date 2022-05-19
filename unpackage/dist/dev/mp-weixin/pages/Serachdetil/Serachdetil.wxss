@@ -1,0 +1,27 @@
+._ul.data-v-4538ad68 {
+  padding-left: 4%;
+}
+._ul ._li.data-v-4538ad68 {
+  margin-top: 30rpx;
+  align-items: center;
+  display: flex;
+}
+._ul ._li .icon.data-v-4538ad68 {
+  position: absolute;
+  right: 4%;
+}
+._ul ._li .namebox.data-v-4538ad68 {
+  margin-left: 4%;
+  display: flex;
+  font-size: 25rpx;
+  flex-direction: column;
+}
+._ul ._li .namebox .name.data-v-4538ad68 {
+  font-size: 35rpx;
+}
+._ul ._li .namebox .songname.data-v-4538ad68 {
+  display: flex;
+  margin-top: 10rpx;
+  color: #B7B7B7;
+}
+

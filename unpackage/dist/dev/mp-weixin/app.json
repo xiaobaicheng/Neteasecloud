@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/Serach/Serach",
     "pages/Detail/Detail",
-    "pages/Songdetails/Songdetails"
+    "pages/Songdetails/Songdetails",
+    "pages/Loginphone/Loginphone",
+    "pages/Serachdetil/Serachdetil"
   ],
   "subPackages": [],
   "window": {

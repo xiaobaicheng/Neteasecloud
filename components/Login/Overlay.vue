@@ -6,6 +6,7 @@
 				<u-button text="微信一键授权登录" size="normal" type="error" @click="Login"></u-button>
 			</view>
 		</view>
+	
 	</view>
 </template>
 
@@ -18,6 +19,7 @@
 			}
 		},
 		methods:{
+	
 			Login(){
 				uni.getUserProfile({
 					desc:"登录接口",

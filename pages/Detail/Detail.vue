@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="wrap" ref="wrap" :style="{ 'background': (id ==2884035 ?  background[3].color : 
-		id ==19723756 ?  background[0].color : id ==3778678 ? background[2].color : background[1].color)}">
+		id ==19723756 ?  background[0].color : id ==3778678 ? background[2].color : background[1].color),'opacity':( isShow ? '1' : '0')}" >
 		
 			<view class="soar" v-for="item in Listdata" :key="item.id">
 				<view class="soarimg">
@@ -18,18 +18,18 @@
 					<text class="mesge">{{item.description}}</text>
 				</view>
 			</view>
-			<button class="square">
+			<button class="square" :style="{ 'opacity':( isShow ? '1' : '0') }">
 				<u-icon name="share-square"></u-icon>分享给微信好友
 			</button>
 		</view>
 		<view class="content">
-			<view class="header">
+			<view class="header" :style="{ 'opacity':( isShow ? '1' : '0') }">
 				<u-icon name="play-circle" size="27"></u-icon>
 				<p>播放全部</p>
 				<text>(共{{songList.length}}首)</text>
 			</view>
 			<ul v-for="(item,index) in songList" :key="item.id">
-				<li @click="songdetile(item.id,item.name)">
+				<li @click="songdetile(item.id,item.name,item.al.picUrl)">
 					<text>{{index+1}}</text>
 					<view class="namebox">
 						<text class="name">{{item.name}}</text>
@@ -58,6 +58,8 @@
 				id: "",
 				Listdata: [],
 				songList: [],
+				isShow:false,
+				picurl:"",
 				background: [{
 						id: 19723756,
 						color: '#F375AB'
@@ -89,31 +91,39 @@
 		},
 		mounted() {
 			this.getdatil()
+			this.getsongdatil()
 			const wrap = this.$refs.wrap
-			console.log(1);
+		},
+		updated() {
+		this.isShow = true	
 		},
 		methods: {
 			//点击前往歌曲详情页面
-			songdetile(id,name){
-				console.log(id);
+			songdetile(id,name,...picUrl){ 
+				let a =picUrl.toString()
+				//传递参数过长会被截断，需要转换一下
+				let imgUrl = encodeURIComponent(JSON.stringify(a))
 				uni.navigateTo({
-					//	url:`../../pages/Detail/Detail?id=${id}`
-					url:`../Songdetails/Songdetails?id=${id}&name=${name}`
+					url:`../Songdetails/Songdetails?id=${id}&name=${name}&imgUrl=${imgUrl}`
 				})
 			},
 			//获取歌单详情页面
+			
 			async getdatil() {
 				const {
 					id
 				} = this
-				let {
-					data
-				} = await uni.$http.get(`/playlist/detail?id=${id}`)
+				let {data} = await uni.$http.get(`/playlist/detail?id=${id}`)
 				this.Listdata.push(data.playlist)
 				this.songList = data.playlist.tracks
-				console.log(...this.songList.splice(0,1));
-				//http://localhost:3000/song/url?id=1947537070从列表点进去获取取歌曲详情
-				}
+
+				},
+				async getsongdatil() {
+					const {
+						id
+					} = this
+					let {data} = await uni.$http.get(`/playlist/track/all?id=${id}&limit=10&offset=1`)
+;					}
 		}
 	}
 </script>
@@ -131,6 +141,7 @@
 		width: 100%;
 		height: 500upx;
 		background-color: #F375AB;
+	
 
 	}
 

@@ -1,3 +1,27 @@
+.bij.data-v-1fdde3e2 {
+  position: relative;
+}
+.wrap.data-v-1fdde3e2 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  outline: 1px black solid;
+}
+.loop.data-v-1fdde3e2 {
+  margin-top: 20rpx;
+  color: green;
+  text-align: center;
+}
+.lycir.data-v-1fdde3e2 {
+  text-align: center;
+  line-height: 70rpx;
+}
+.lycir text.data-v-1fdde3e2 {
+  text-align: center;
+}
 .logobox.data-v-1fdde3e2 {
   margin-top: 30rpx;
   display: flex;
@@ -16,5 +40,61 @@
   border-radius: 50%;
   width: 100%;
   height: 100%;
+}
+.bigimg.data-v-1fdde3e2 {
+  width: 500rpx;
+  height: 500rpx;
+  margin: auto;
+  background-color: black;
+  border-radius: 50%;
+  display: block;
+  -webkit-animation: rotate-data-v-1fdde3e2 10s linear infinite;
+          animation: rotate-data-v-1fdde3e2 10s linear infinite;
+}
+@-webkit-keyframes rotate-data-v-1fdde3e2 {
+0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+    /*从0度开始*/
+}
+100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+    /*360度结束*/
+}
+}
+@keyframes rotate-data-v-1fdde3e2 {
+0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+    /*从0度开始*/
+}
+100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+    /*360度结束*/
+}
+}
+.imgbox.data-v-1fdde3e2 {
+  width: 400rpx;
+  height: 400rpx;
+  margin: auto;
+  padding-top: 10%;
+  border-radius: 50%;
+}
+.imgbox.data-v-1fdde3e2:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+.imgbox image.data-v-1fdde3e2 {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.audio-play.data-v-1fdde3e2 {
+  position: absolute;
+  width: 4%;
+  top: 260rpx;
+  left: 46%;
 }
 

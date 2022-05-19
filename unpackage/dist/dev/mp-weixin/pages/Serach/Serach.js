@@ -96,10 +96,10 @@ var components
 try {
   components = {
     uSearch: function() {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-search/u-search */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-search/u-search")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-search/u-search.vue */ 183))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-search/u-search */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-search/u-search")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-search/u-search.vue */ 197))
     },
     uIcon: function() {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-icon/u-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-icon/u-icon")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-icon/u-icon.vue */ 213))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-icon/u-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-icon/u-icon")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-icon/u-icon.vue */ 227))
     }
   }
 } catch (e) {
@@ -156,7 +156,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 35));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var Hotlist = function Hotlist() {__webpack_require__.e(/*! require.ensure | components/serach/Hotlist */ "components/serach/Hotlist").then((function () {return resolve(__webpack_require__(/*! ../../components/serach/Hotlist.vue */ 222));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 35));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var Hotlist = function Hotlist() {__webpack_require__.e(/*! require.ensure | components/serach/Hotlist */ "components/serach/Hotlist").then((function () {return resolve(__webpack_require__(/*! ../../components/serach/Hotlist.vue */ 236));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -196,16 +196,28 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
   },
   methods: {
-    change: function change(e) {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res, _yield$uni$$http$get, data;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
-                  uni.$http.get("/search/multimatch?keywords=".concat(e)));case 2:res = _context.sent;
-                console.log(res.data.result.artist);_context.next = 6;return (
+    fetseachData: function fetseachData(keywords) {
+      uni.navigateTo({
+        url: "./../Serachdetil/Serachdetil?keywords=".concat(keywords) });
 
 
-                  uni.$http.get("/search/suggest?keywords=".concat(e, "&type=mobile")));case 6:_yield$uni$$http$get = _context.sent;data = _yield$uni$$http$get.data;
+    },
+    //获取子组件的数据
+    teatData: function teatData(data) {
+      this.search += data;
+    },
+    change: function change(e) {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res, _yield$uni$$http$get, data;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:if (!(
+                e.trim() == '')) {_context.next = 4;break;}return _context.abrupt("return");case 4:_context.next = 6;return (
+                  uni.$http.get("/search/multimatch?keywords=".concat(e)));case 6:res = _context.sent;_context.next = 9;return (
+
+
+                  uni.$http.get("/search/suggest?keywords=".concat(e, "&type=mobile")));case 9:_yield$uni$$http$get = _context.sent;data = _yield$uni$$http$get.data;
                 if (data.code == 200) {
                   _this.isSreach = false;
                 }
-                _this.seachData = data.result.allMatch;case 10:case "end":return _context.stop();}}}, _callee);}))();
+                _this.seachData = data.result.allMatch;case 13:case "end":return _context.stop();}}}, _callee);}))();
+
+
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

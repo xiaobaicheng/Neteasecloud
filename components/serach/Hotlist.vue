@@ -1,7 +1,7 @@
 <template>
 	<view class="Hotsearch">
 		<ul v-for="(item,index) in searchhot" :key="index">
-			<li>
+			<li @click="word(item.searchWord)">
 				<view class="Serial">
 					<i>{{index + 1}}</i>
 					{{item.searchWord}}
@@ -20,10 +20,13 @@
 				searchhot: []
 			}
 		},
-		created() {
+		onReady() {
 			this.getsearch()
 		},
 		methods: {
+			word(value){
+				this.$emit('getData',value)
+			},
 			async getsearch() {
 				let {
 					data

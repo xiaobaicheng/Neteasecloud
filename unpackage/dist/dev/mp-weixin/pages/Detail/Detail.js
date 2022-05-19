@@ -96,7 +96,7 @@ var components
 try {
   components = {
     uIcon: function() {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-icon/u-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-icon/u-icon")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-icon/u-icon.vue */ 213))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-icon/u-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-icon/u-icon")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-icon/u-icon.vue */ 227))
     }
   }
 } catch (e) {
@@ -163,7 +163,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 35));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};} //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 35));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};} //
 //
 //
 //
@@ -223,6 +223,8 @@ var _default =
       id: "",
       Listdata: [],
       songList: [],
+      isShow: false,
+      picurl: "",
       background: [{
         id: 19723756,
         color: '#F375AB' },
@@ -254,31 +256,39 @@ var _default =
   },
   mounted: function mounted() {
     this.getdatil();
+    this.getsongdatil();
     var wrap = this.$refs.wrap;
-    console.log(1);
+  },
+  updated: function updated() {
+    this.isShow = true;
   },
   methods: {
     //点击前往歌曲详情页面
-    songdetile: function songdetile(id, name) {
-      console.log(id);
+    songdetile: function songdetile(id, name) {for (var _len = arguments.length, picUrl = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {picUrl[_key - 2] = arguments[_key];}
+      var a = picUrl.toString();
+      //传递参数过长会被截断，需要转换一下
+      var imgUrl = encodeURIComponent(JSON.stringify(a));
       uni.navigateTo({
-        //	url:`../../pages/Detail/Detail?id=${id}`
-        url: "../Songdetails/Songdetails?id=".concat(id, "&name=").concat(name) });
+        url: "../Songdetails/Songdetails?id=".concat(id, "&name=").concat(name, "&imgUrl=").concat(imgUrl) });
 
     },
     //获取歌单详情页面
-    getdatil: function getdatil() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _console;var id, _yield$uni$$http$get, data;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+
+    getdatil: function getdatil() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var id, _yield$uni$$http$get, data;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
 
                 id =
                 _this.id;_context.next = 3;return (
-
-
                   uni.$http.get("/playlist/detail?id=".concat(id)));case 3:_yield$uni$$http$get = _context.sent;data = _yield$uni$$http$get.data;
                 _this.Listdata.push(data.playlist);
-                _this.songList = data.playlist.tracks;
-                (_console = console).log.apply(_console, _toConsumableArray(_this.songList.splice(0, 1)));
-                //http://localhost:3000/song/url?id=1947537070从列表点进去获取取歌曲详情
-              case 8:case "end":return _context.stop();}}}, _callee);}))();} } };exports.default = _default;
+                _this.songList = data.playlist.tracks;case 7:case "end":return _context.stop();}}}, _callee);}))();
+
+    },
+    getsongdatil: function getsongdatil() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var id, _yield$uni$$http$get2, data;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
+
+                id =
+                _this2.id;_context2.next = 3;return (
+                  uni.$http.get("/playlist/track/all?id=".concat(id, "&limit=10&offset=1")));case 3:_yield$uni$$http$get2 = _context2.sent;data = _yield$uni$$http$get2.data;case 5:case "end":return _context2.stop();}}}, _callee2);}))();
+    } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

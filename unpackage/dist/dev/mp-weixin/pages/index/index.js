@@ -96,19 +96,19 @@ var components
 try {
   components = {
     uAvatar: function() {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-avatar/u-avatar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-avatar/u-avatar")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-avatar/u-avatar.vue */ 165))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-avatar/u-avatar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-avatar/u-avatar")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-avatar/u-avatar.vue */ 179))
     },
     uButton: function() {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-button/u-button */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-button/u-button")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-button/u-button.vue */ 173))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-button/u-button */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-button/u-button")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-button/u-button.vue */ 187))
     },
     uSearch: function() {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-search/u-search */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-search/u-search")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-search/u-search.vue */ 183))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-search/u-search */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-search/u-search")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-search/u-search.vue */ 197))
     },
     uOverlay: function() {
-      return Promise.all(/*! import() | node-modules/uview-ui/components/u-overlay/u-overlay */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-overlay/u-overlay")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-overlay/u-overlay.vue */ 191))
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u-overlay/u-overlay */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-overlay/u-overlay")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-overlay/u-overlay.vue */ 205))
     },
     List: function() {
-      return Promise.all(/*! import() | components/List/List */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/List/List")]).then(__webpack_require__.bind(null, /*! @/components/List/List.vue */ 199))
+      return Promise.all(/*! import() | components/List/List */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/List/List")]).then(__webpack_require__.bind(null, /*! @/components/List/List.vue */ 213))
     }
   }
 } catch (e) {
@@ -239,7 +239,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _vuex = __webpack_require__(/*! vuex */ 138);function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var Overlay = function Overlay() {__webpack_require__.e(/*! require.ensure | components/Login/Overlay */ "components/Login/Overlay").then((function () {return resolve(__webpack_require__(/*! ../../components/Login/Overlay.vue */ 206));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var List = function List() {Promise.all(/*! require.ensure | components/List/List */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/List/List")]).then((function () {return resolve(__webpack_require__(/*! @/components/List/List.vue */ 199));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _vuex = __webpack_require__(/*! vuex */ 138);function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var Overlay = function Overlay() {__webpack_require__.e(/*! require.ensure | components/Login/Overlay */ "components/Login/Overlay").then((function () {return resolve(__webpack_require__(/*! ../../components/Login/Overlay.vue */ 220));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var List = function List() {Promise.all(/*! require.ensure | components/List/List */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/List/List")]).then((function () {return resolve(__webpack_require__(/*! @/components/List/List.vue */ 213));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -274,12 +274,14 @@ var _vuex = __webpack_require__(/*! vuex */ 138);function ownKeys(object, enumer
       //如果登录数据里面有数据，则不弹出
       this.show = false;
     }
-  },
-  created: function created() {
-    var value = uni.getStorageSync('Token');
     this.userdata = value;
   },
-  methods: _objectSpread(_objectSpread({},
+  methods: _objectSpread(_objectSpread({
+    loginphone: function loginphone() {
+      uni.navigateTo({
+        url: '../Loginphone/Loginphone' });
+
+    } },
   (0, _vuex.mapMutations)(['updatauser'])), {}, {
     //退出登录
     updatalogin: function updatalogin() {
@@ -318,6 +320,7 @@ var _vuex = __webpack_require__(/*! vuex */ 138);function ownKeys(object, enumer
     seach: function seach() {
       uni.navigateTo({
         url: '/pages/Serach/Serach' });
+
 
     } }) };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

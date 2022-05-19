@@ -28,7 +28,7 @@
 				</view>
 			</swiper-item>
 			<swiper-item>
-				<view class="swiper-item uni-bg-red">
+				<view class="swiper-item uni-bg-red" @click="loginphone">
 					<img src="../../static/img/1645586879166.jpg" alt="">
 				</view>
 			</swiper-item>
@@ -85,12 +85,14 @@
 				//如果登录数据里面有数据，则不弹出
 				this.show = false
 			}
-		},
-		created() {
-		const value = uni.getStorageSync('Token')
-		this.userdata = value
+			this.userdata = value
 		},
 		methods: {
+			loginphone (){
+			uni.navigateTo({
+				url:'../Loginphone/Loginphone'
+			})	
+			},
 			...mapMutations(['updatauser']),
 			//退出登录
 			updatalogin() {
@@ -130,6 +132,7 @@
 				uni.navigateTo({
 					url: '/pages/Serach/Serach'
 				});
+				
 			}
 		}
 	}
