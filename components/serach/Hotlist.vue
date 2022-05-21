@@ -1,9 +1,10 @@
 <template>
 	<view class="Hotsearch">
+		<text class="hotde">热搜榜</text>
 		<ul v-for="(item,index) in searchhot" :key="index">
 			<li @click="word(item.searchWord)">
 				<view class="Serial">
-					<i>{{index + 1}}</i>
+					<i :class="'indexi'+(index+1)">{{index + 1}}</i>
 					{{item.searchWord}}
 				</view>
 				<text class="hot">{{item.score}}</text>
@@ -39,17 +40,31 @@
 
 <style lang="less" scoped>
 	.Hotsearch{
+		.hotde{
+			margin-left: 5%;
+			padding-top: 20upx;
+		}
 		ul{
 			line-height: 100upx;
 			margin-left: 5%;
 			margin-right: 5%;
+			font-family: monospace;
 			li{
 				display: flex;
+				font-size: 30upx;
 				justify-content: space-between;
 				.Serial{
 					display: flex;
 					i{
 						padding-right: 70upx;
+					}
+					.indexi1{
+						color: red;
+					}
+					.indexi2{
+						color: red;
+					}	.indexi3{
+						color: red;
 					}
 				}
 				.hot{

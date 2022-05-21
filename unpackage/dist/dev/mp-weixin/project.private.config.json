@@ -30,6 +30,13 @@
                     "name": "",
                     "pathName": "pages/Serach/Serach",
                     "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/Detail/Detail",
+                    "query": "id=19723756",
                     "scene": null,
                     "launchMode": "default"
                 }

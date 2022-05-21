@@ -23,7 +23,7 @@
 			</button>
 		</view>
 		<view class="content">
-			<view class="header" :style="{ 'opacity':( isShow ? '1' : '0') }">
+			<view class="header" :style="{ 'opacity':( isShow ? '1' : '0') }" @click="PlayAll">
 				<u-icon name="play-circle" size="27"></u-icon>
 				<p>播放全部</p>
 				<text>(共{{songList.length}}首)</text>
@@ -98,6 +98,15 @@
 		this.isShow = true	
 		},
 		methods: {
+			//点击播放全部
+			PlayAll(){
+				//item.id,item.name,item.al.picUrl
+				this.songList.forEach((item)=>{
+					console.log(item.id,item.name,item.al.picUrl);
+					
+				})
+				// console.log(this.songList);
+			},
 			//点击前往歌曲详情页面
 			songdetile(id,name,...picUrl){ 
 				let a =picUrl.toString()

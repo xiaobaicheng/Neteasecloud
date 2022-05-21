@@ -4,12 +4,16 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-	  logindata:{}
+	  logindata:{},
+	  addsong:0,//记录添加音乐播放
   },
   mutations: {
 	  //添加登录数据
 	  updatauser(state,logindata){
 		  state.logindata = logindata//将用户数据更新到state中
+	  },
+	  upaddsong(state){
+		  state.addsong++
 	  }
   },
   actions: {
