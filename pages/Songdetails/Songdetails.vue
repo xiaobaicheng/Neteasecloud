@@ -121,7 +121,7 @@
 			this.simisong()
 			this.getComment()
 		},
-		onUnload() {				this.innerAudioContext.destroy()},
+		// onUnload() {				this.innerAudioContext.destroy()},
 		methods: {
 			//获取评论数据
 			async getComment(){
@@ -166,6 +166,7 @@
 			},
 			//点击推荐音乐
 			async simiSong(id, blurPicUrl, name) {
+				console.log(id);
 				let {
 					data
 				} = await uni.$http.get(`/song/url?id=${id}`)

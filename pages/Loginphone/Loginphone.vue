@@ -25,15 +25,20 @@
 			},
 			//手机号码登录
 		async	loginphone(){
+			const value = uni.getStorageSync('PHONE_TOKEN')
+			console.log(value);
 			let {password,phone} = this.login
-				let {data} = await uni.$http.get(`/login/cellphone?phone=${phone}&password=${password}`)
+				let {data} = await uni.$http.get(`/login/cellphone`,
+				 // headers: { 'Authorization': value } 
+				)
 				// localStorage.setItem('PHONE_TOKEN',data.token)
 				console.log(data);
-					uni.setStorage({
-						key: "PHONE_TOKEN",
-						data: {...data}
+				// { headers: { Authorization: `Bearer ${Base.token}` } }
+				// 	uni.setStorage({
+				// 		key: "PHONE_TOKEN",
+				// 		data: data.token
 				
-					})
+				// 	})
 			}
 		}
 	}
