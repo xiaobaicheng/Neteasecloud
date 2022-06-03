@@ -74,11 +74,25 @@
 					key: 'History'
 				});
 				this.arr = JSON.parse(ges[1].data);
-				this.arr.unshift(search)
-				uni.setStorage({
-					key: 'History',
-					data: JSON.stringify(this.arr) //转换为字符串形式
-				});
+				if(ges[1].data == "[]"){
+					this.arr.unshift(search)
+				}
+				else{
+					this.arr.forEach((item,i)=>{
+						if(this.arr.indexOf(search) === -1 || this.arr == [] ){
+							console.log(1);
+							this.arr.unshift(search)
+						}
+						else{
+							this.arr.unshift()
+							console.log("已经有了");
+						}
+					})
+					}
+					uni.setStorage({
+						key: 'History',
+						data: JSON.stringify(this.arr) //转换为字符串形式
+					});
 				uni.navigateTo({
 					url: `./../Serachdetil/Serachdetil?keywords=${keywords}`
 				})
